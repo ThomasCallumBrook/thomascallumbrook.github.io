@@ -138,7 +138,7 @@ h2 ~ p {
 }
 .footer h3 {
   color: #fff;
-  padding-top: 1.5em;
+  padding: 1.5em;
   text-transform: uppercase;
 }
 .footer h3 span {
@@ -155,9 +155,14 @@ h2 ~ p {
 /* HERO STYLES */
 .full-hero {
   background-color: #c7dbfc;
-  height: 50vh;
+  background-size: cover;
+  box-sizing: border-box;
+  height: 100vh;
+  padding-top: 10vh;
 }
-
+.hero-home {
+  background-image: url(/images/shark.jpg);
+}
 /* SOCIAL STYLES */
 .social-list {
   list-style: none;
