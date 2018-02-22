@@ -7,7 +7,6 @@ authorTwitter: http://twitter.com/mhartl
 gravatar: https://gravatar.com/avatar/ffda7d145b83c4b118f982401f962ca6?s=150
 postFooter: Additional information, and maybe a <a href="#">link or two</a>
 ---
-
 Call me *Ishmael*. Some years ago–*never mind how long
 precisely*–having little or no money in my purse, and nothing
 particular to interest me on shore, I thought I would sail about a little
