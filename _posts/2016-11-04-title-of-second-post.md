@@ -5,7 +5,7 @@ postHero: /images/pose.jpg
 author: Thomas Callum Brook
 authorTwitter:
 gravatar: https://www.gravatar.com/avatar/57d16d81be9c66bf3381299cbc62613b?s=200
-postFooter: Additional information, and maybe a <a href="#">link or two</a>
+postFooter: 
 ---
 ***Where to start?*** This blog will represent the musings of a developing, developer: from zero experience to (hopefully) some level of competence.
 

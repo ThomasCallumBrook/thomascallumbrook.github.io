@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>Test Page: Don't Panic</title>
+  
+    <title>This is the title of the post</title>
+  
+  
+  <meta name="description" content="This is a dangerous site.">
+
+  <link href="/favicon.png" rel="icon">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:200" rel="stylesheet">
+  <link rel="stylesheet" href="/fonts/fontawesome-free-5.0.6/on-server/css/fontawesome-all.css">
   <link rel="stylesheet" href="/css/reset.css">
   <link rel="stylesheet" href="/css/main.css">
   <style>
@@ -13,10 +21,22 @@
   <body>
     <header class="header">
   <nav>
+    <input type="checkbox" id="mobile-menu" class="mobile-menu-check">
+    <label for="mobile-menu" class="show-mobile-menu">Menu</label>
     <ul class="header-nav nav nav-links">
       <li><a href="/">Home</a></li>
 <li><a href="/gallery">Gallery</a></li>
-<li><a href="/blog">Blog</a></li>
+<li class="dropdown">
+  <a class="drop-trigger" href="/blog">Blog</a>
+  <ul class="drop-menu">
+    <li>Recent Posts</li>
+    
+      <li><a href="/2016/11/04/title-of-second-post.html">So it begins...</a></li>
+    
+      <li><a href="/2016/11/03/title-of-post.html">This is the title of the post</a></li>
+    
+  </ul>
+</li>
 <li><a href="/2016/11/04/title-of-second-post.html">Newest Post</a></li>
 
     </ul>
@@ -35,7 +55,7 @@
       <h1>This is the title of the post</h2>
       <div class="post-byline">
         <img src="https://gravatar.com/avatar/ffda7d145b83c4b118f982401f962ca6?s=150">
-        <a href="http://twitter.com/mhartl" class="social-link">Tw</a>
+        <a href="http://twitter.com/mhartl" class="social-link"><i class="fab fa-twitter"></i></a>
         by: Me, Myself, and I
         <span> - November 03, 2016</span>
       </div>
@@ -82,7 +102,7 @@ cherish very nearly the same feelings towards the ocean with me.</p>
 
     </div>
     <footer class="post-footer">
-      Additional information, and maybe a <a href="#">link or two</a>
+      
     </footer>
   </article>
 </div>
@@ -96,7 +116,17 @@ cherish very nearly the same feelings towards the ocean with me.</p>
     <ul class="footer-nav nav-links">
       <li><a href="/">Home</a></li>
 <li><a href="/gallery">Gallery</a></li>
-<li><a href="/blog">Blog</a></li>
+<li class="dropdown">
+  <a class="drop-trigger" href="/blog">Blog</a>
+  <ul class="drop-menu">
+    <li>Recent Posts</li>
+    
+      <li><a href="/2016/11/04/title-of-second-post.html">So it begins...</a></li>
+    
+      <li><a href="/2016/11/03/title-of-post.html">This is the title of the post</a></li>
+    
+  </ul>
+</li>
 <li><a href="/2016/11/04/title-of-second-post.html">Newest Post</a></li>
 
     </ul>
@@ -104,13 +134,19 @@ cherish very nearly the same feelings towards the ocean with me.</p>
   <h3>Learn Enough <span>to Be Dangerous</span></h3>
   <ul class="social-list">
     <li>
-  <a href="http://example.com/" class="social-link">Fb</a>
+  <a href="https://facebook.com/learnenough" class="social-link">
+    <i class="fab fa-facebook-f"></i>
+  </a>
 </li>
 <li>
-  <a href="http://example.com/" class="social-link">Tw</a>
+  <a href="https://twitter.com/learnenough" class="social-link">
+    <i class="fab fa-twitter"></i>
+  </a>
 </li>
 <li>
-  <a href="http://example.com/" class="social-link">Gh</a>
+  <a href="https://github.com/learnenough" class="social-link">
+    <i class="fab fa-github"></i>
+  </a>
 </li>
 
   </ul>
