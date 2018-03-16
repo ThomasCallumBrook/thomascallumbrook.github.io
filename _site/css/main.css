@@ -71,7 +71,7 @@ h2 {
   font-size: 2em;
 }
 h2 ~ p {
-  font-size: 0.8em;
+  font-size: 1em;
   font-style: italic;
   margin: 1em auto 0;
   max-width: 70%;
@@ -434,9 +434,9 @@ p {
   text-transform: uppercase;
 }
 .callout-copy {
-  flex: 0 0 45em;
+  flex: 0 1 45em;
   padding: 0 3vw;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
 }
 
 .home-section h2 {
@@ -484,7 +484,7 @@ p {
   margin: 2em auto 1em;
 }
 .bio-copy {
-  font-size: 0.75em;
+  font-size: 0.9em;
 }
 /* GALLERY STYLES */
 .gallery-thumbs {
