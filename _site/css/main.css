@@ -278,7 +278,9 @@ p {
 .footer-nav a {
   color: #ccc;
 }
-
+.footer .social-list{
+  padding-top: 10px;
+}
 /* COLUMN STYLES */
 .col-two {
   display: flex;
@@ -331,11 +333,11 @@ p {
 
 /* HERO STYLES */
 .full-hero {
-  background-color: #c7dbfc;
+  background-color: #300A24;
   background-size: cover;
   box-sizing: border-box;
   height: 90vh;
-  padding-top: 10vh;
+  padding-top: 100px;
 }
 
 .full-hero .social-list {
@@ -343,11 +345,13 @@ p {
  bottom: 60px;
  left: 50%;
  transform: translate(-50%, 0);
+ z-index: 10;
 }
 .full-hero .social-link {
  background-color: rgba(255, 255, 255, 0.8);
  color: #557c83;
  font-size: 1.2rem;
+ z-index: 2;
 }
 .full-hero .social-link:hover {
  background-color: #000;
@@ -381,7 +385,7 @@ p {
   color: rgba(255, 255, 255, 0.8);
   font-size: 5vw;
   margin-bottom: 0.25em;
-  z-index: 6;
+  z-index: 3;
 }
 .hero-content .terminal {
   height: 30vh;
@@ -389,7 +393,7 @@ p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 4;
+  z-index: 2;
 }
 .half-hero {
   background-position: center center;
@@ -476,6 +480,20 @@ p {
   width: 75%;
 }
 /* BIO STYLES */
+.profile h3 {
+  color: #555;
+  font-size: 1.5em;
+  margin: 0 0 1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+.profile img {
+  width: 100%;
+}
+.profile .social-link {
+  display: block;
+  margin: 2em auto 1em;
+}
 .bio-wrapper {
   font-size: 24px;
   margin: auto;
@@ -488,12 +506,12 @@ p {
   font-size: 1rem;
   margin: 6rem 0 0;
   padding: 0 3%;
-  width: 33%;
+  width: 50%;
 }
 .bio-box h3 {
-  color: #fff;
+  color: #555;
   font-size: 1.5em;
-  margin: -40px 0 1em;
+  margin: 0 0 1em;
   text-align: center;
   text-transform: uppercase;
 }
@@ -508,6 +526,9 @@ p {
   font-size: 0.9em;
 }
 /* GALLERY STYLES */
+.gallery {
+  padding-top: 60px;
+}
 .gallery-thumbs {
   height: 90vh;
   overflow: scroll;
@@ -692,6 +713,7 @@ p {
   }
   /* GALLERY STYLES */
   .gallery {
+    padding-top: 80px;
     flex-direction: column;
   }
   .gallery .col {
