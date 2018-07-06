@@ -2,7 +2,7 @@
 <html>
   <head>
   
-    <title>Blog | Thomas Callum Brook</title>
+    <title>JavaScript Assets in Rails</title>
   
   
   <meta name="description" content="This is a dangerous site.">
@@ -79,10 +79,20 @@
 </header>
 
     <div class="content-container">
-      <div class="page blog-index">
-  <h1>A Developing Developer's Blog</h1>
-  <div class="col-two blog-cols">
-    <div class="col col-aside blog-recent">
+      <div class="post">
+  <div class="half-hero" style="background-image:url(/images/Background.png)"></div>
+
+  <article class="page">
+    <header class="post-header">
+      <h1>JavaScript Assets in Rails</h2>
+      <div class="post-byline">
+        <img src="https://www.gravatar.com/avatar/57d16d81be9c66bf3381299cbc62613b?s=200">
+        <a href="" class="social-link"><i class="fab fa-twitter"></i></a>
+        by: Thomas Callum Brook
+        <span> - July 06, 2018</span>
+      </div>
+    </header>
+    <aside class="post-aside">
       <h4>Recent Posts</h4>
 <ul class="blog-title-list">
   
@@ -98,46 +108,49 @@
   
 </ul>
 
+    </aside>
+    <div class="post-content">
+      <p>It’s been forever since I’ve posted, so I thought I’d start a theme. Whenever I solve a mini problem I’ve experienced in my new web dev career, I’ll make a mini post about it. The title will be the problem, and the post my solution. This will serve as a reminder to myself how I fixed the issue, should I encounter it again and also as a possible helping hand to others in future should I make the blog more far reaching.</p>
+
+<p><strong><em>JavaScript Assets:</em></strong></p>
+
+<p>In Rails, the asset pipeline precompiles all your JS and CSS into neatly processed and minified files and should be the main way of encorporating any new scripts.</p>
+
+<p>When I start adding some simple JS, I usually begin by inserting it into the relevant page within the normal <strong>’&lt;script&gt;‘</strong> tags. It’s the quick and dirty method when your first testing whether the code is doing as expected, and requires no big picture thinking for your app.</p>
+
+<p>Once I had pieced together the code I wanted for a couple of different pages however, I was ready to move it to the pipeline: here begins the issue.</p>
+
+<p>The default asset pipeline config is great for generic code which isn’t page specific, and doesn’t rely on specific data or DOM elements in order to excute correctly. It all gets loaded in by application.js under the simple line <strong>’//= require_tree .’</strong></p>
+
+<p>What happens if you don’t want each file to be loaded in on each page though? In my example the page specfic JS would raise an error searching for non-existant DOM elements on incorrect pages. At this point the remaining JS won’t be executed and a very boring web page provided solely by the HTML template is all that is displayed.</p>
+
+<p><strong>SOLUTION:</strong></p>
+
+<p>Some quick googling revealed that:</p>
+
+<ul>
+  <li>
+    <p>Removal of require tree line in application.js (ensuring all other necessary js files are still listed).</p>
+  </li>
+  <li>
+    <p>Including each page specific js file via <strong>&lt;%= javascript_include_tag “&lt;js-file&gt;” %&gt;</strong> in the relevant view html.erb file.</p>
+  </li>
+  <li>
+    <p>Adding the line <strong>‘Rails.application.config.assets.precompile += %w( &lt;js-file.js&gt; &lt;js-file2.js&gt; )’</strong> to config/initializers/assets.rb.</p>
+  </li>
+</ul>
+
+<p>Allows my js files to still be precompiled in production, whilst ensuring they are only used on the required page.</p>
+
+<p>All in all, a quick fix :)</p>
+
+<p><em>Tom</em></p>
+
     </div>
-    <div class="col col-content blog-previews">
+    <footer class="post-footer">
       
-        <div class="blog-posts">
-          <header class="post-header">
-            <h2><a href="/2018/07/06/javascript-assets.html">JavaScript Assets in Rails</a></h2>
-            <div class="post-byline">
-              <img src="https://www.gravatar.com/avatar/57d16d81be9c66bf3381299cbc62613b?s=200" />
-              <a href="" class="social-link"><i class="fab fa-twitter"></i></a>
-              by: Thomas Callum Brook
-              <span> - July 06, 2018</span>
-            </div>
-          </header>
-          <div class="posts-image"
-               style="background-image:url(/images/Background.png)"></div>
-          <p>It’s been forever since I’ve posted, so I thought I’d start a theme. Whenever I solve a mini problem I’ve experienced in my new web dev career, I’ll make a mini post about it. The title will be the problem, and the post my solution. This will serve as a reminder to myself how I fixed the issue, should I encounter it again and also as a possible helping hand to others in future should I make the blog more far reaching.</p>
-
-
-        </div>
-      
-        <div class="blog-posts">
-          <header class="post-header">
-            <h2><a href="/2018/02/24/title-of-second-post.html">So it begins...</a></h2>
-            <div class="post-byline">
-              <img src="https://www.gravatar.com/avatar/57d16d81be9c66bf3381299cbc62613b?s=200" />
-              <a href="" class="social-link"><i class="fab fa-twitter"></i></a>
-              by: Thomas Callum Brook
-              <span> - February 24, 2018</span>
-            </div>
-          </header>
-          <div class="posts-image"
-               style="background-image:url(/images/pose.jpg)"></div>
-          <p><strong><em>Where to start?</em></strong> This blog will represent the musings of a developing, developer: from zero experience to (hopefully) some level of competence.<br />
-The main purposes of this blog were to:</p>
-
-
-        </div>
-      
-    </div>
-  </div>
+    </footer>
+  </article>
 </div>
 
     </div>
